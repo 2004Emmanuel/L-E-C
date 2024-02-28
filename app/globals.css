@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  padding: 0;
+  margin: 0;
+  background-color: #0D0c22;
+  color: #fff;
+}
+.bgsoft{
+  background-color: #2D2B42;
+}
+.headeline_text{
+  line-height: 80px;
+}

@@ -26,7 +26,7 @@ const Blog = () => {
   console.log(posts)
   return (
     <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-4 gap-4 py-4'>
-    {posts.slice(0,9).map((x, index) => (
+    {posts.map((x, index) => (
       <Blogcard x={x} key={index} />
     ))}
     </div>

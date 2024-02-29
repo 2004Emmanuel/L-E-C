@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
+import Author from '@/app/Author/Author';
 const getSingPost = async (slug) => {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
 
@@ -12,6 +13,7 @@ const getSingPost = async (slug) => {
 const Singlepost = async ({params}) => {
   const { slug } = params;
   const post = await getSingPost(slug);
+  console.log(post); 
   return (
     <div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -22,7 +24,7 @@ const Singlepost = async ({params}) => {
           <div className="">
             <h1 className="font-bold text-2xl ">{post.title}</h1>
             <div className="my-8">
-             author
+             <Author userId={post.userId} />
             </div>
           </div>
           <p className="text-lg text-gray-400 mb-8">{post.body}</p>
